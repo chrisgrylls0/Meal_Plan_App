@@ -1,0 +1,6 @@
+# Local settings
+*.env.local
+*.env.*.local
+
+# pytest cache
+.cache/
