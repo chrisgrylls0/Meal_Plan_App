@@ -46,8 +46,21 @@ document.addEventListener('DOMContentLoaded', function() {
             let list = document.getElementById('shopping-list');
             list.innerHTML = '';
             Object.entries(data.ingredients).forEach(([ingredient, count]) => {
+                // Check if ingredient is removed
+                let removed = JSON.parse(localStorage.getItem('removedIngredients') || '[]');
+                if (removed.includes(ingredient)) return;
                 let li = document.createElement('li');
                 li.textContent = `${ingredient} x${count}`;
+                let btn = document.createElement('button');
+                btn.textContent = 'Remove';
+                btn.style.marginLeft = '10px';
+                btn.onclick = function() {
+                    let removed = JSON.parse(localStorage.getItem('removedIngredients') || '[]');
+                    removed.push(ingredient);
+                    localStorage.setItem('removedIngredients', JSON.stringify(removed));
+                    updateShoppingList();
+                };
+                li.appendChild(btn);
                 list.appendChild(li);
             });
         });
@@ -58,10 +71,49 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = '/export_list';
     });
 
+    // Copy shopping list to clipboard
+    document.getElementById('copy-list').addEventListener('click', function() {
+        let items = [];
+        document.querySelectorAll('#shopping-list li').forEach(li => {
+            // Only copy the text, not the button
+            items.push(li.firstChild.textContent);
+        });
+        const text = items.join('\n');
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Shopping list copied to clipboard!');
+            }, () => {
+                alert('Failed to copy shopping list.');
+            });
+        } else {
+            // Fallback for older browsers
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                alert('Shopping list copied to clipboard!');
+            } catch (err) {
+                alert('Failed to copy shopping list.');
+            }
+            document.body.removeChild(textarea);
+        }
+    });
+
     // Clear table logic
     document.getElementById('clear-plan').addEventListener('click', function() {
         document.querySelectorAll('.selected-meal').forEach(span => {
             span.textContent = '';
         });
+    });
+
+    // Reset removed ingredients when saving plan or clearing table
+    document.getElementById('save-plan').addEventListener('click', function() {
+        localStorage.removeItem('removedIngredients');
+    });
+    document.getElementById('clear-plan').addEventListener('click', function() {
+        localStorage.removeItem('removedIngredients');
+        updateShoppingList();
     });
 });
