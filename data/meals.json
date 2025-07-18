@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Pancakes",
+    "ingredients": ["Flour", "Eggs", "Milk", "Sugar", "Butter"]
+  },
+  {
+    "name": "Chicken Salad",
+    "ingredients": ["Chicken Breast", "Lettuce", "Tomato", "Cucumber", "Olive Oil"]
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "ingredients": ["Spaghetti", "Ground Beef", "Tomato Sauce", "Onion", "Garlic"]
+  },
+  {
+    "name": "Omelette",
+    "ingredients": ["Eggs", "Cheese", "Ham", "Milk"]
+  },
+  {
+    "name": "Grilled Cheese",
+    "ingredients": ["Bread", "Cheese", "Butter"]
+  }
+]

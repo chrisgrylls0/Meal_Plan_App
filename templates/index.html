@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Plan App</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/app.js" defer></script>
+</head>
+<body>
+    <h1>Meal Plan App</h1>
+    <div>
+        <strong>Today:</strong> {{ today }}<br>
+        <strong>Next Monday:</strong> {{ next_monday }}
+    </div>
+    <hr>
+    <div id="meals-list">
+        <h2>Meals</h2>
+        <ul>
+            {% for meal in meals %}
+            <li draggable="true" class="meal-item" data-name="{{ meal.name }}">{{ meal.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div id="meal-plan">
+        <h2>Weekly Meal Plan</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Dinner</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for day in ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'] %}
+                <tr data-day="{{ day }}">
+                    <td>{{ day }}</td>
+                    {% for meal_type in ['breakfast','lunch','dinner'] %}
+                    <td class="drop-cell" data-meal-type="{{ meal_type }}">
+                        <span class="selected-meal">{{ plan.get(day, {}).get(meal_type, '') }}</span>
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button id="save-plan">Save Plan</button>
+    </div>
+    <hr>
+    <div id="shopping-list-section">
+        <h2>Shopping List</h2>
+        <ul id="shopping-list"></ul>
+        <button id="export-list">Export to Text File</button>
+    </div>
+</body>
+</html>

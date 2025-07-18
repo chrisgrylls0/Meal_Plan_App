@@ -1,0 +1,9 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1 { color: #2c3e50; }
+table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+.meal-item { cursor: grab; background: #f9f9f9; margin: 4px 0; padding: 4px; border-radius: 4px; }
+.drop-cell { min-width: 120px; min-height: 40px; background: #eef; }
+.selected-meal { font-weight: bold; color: #2980b9; }
+#shopping-list-section { margin-top: 20px; }
+#shopping-list li { margin-bottom: 4px; }
