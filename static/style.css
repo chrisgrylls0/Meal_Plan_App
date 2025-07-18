@@ -1,5 +1,17 @@
 body { font-family: Arial, sans-serif; margin: 20px; }
 h1 { color: #2c3e50; }
+#main-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+#meals-list {
+    min-width: 220px;
+    max-width: 300px;
+}
+#meal-plan {
+    flex: 1;
+}
 table { border-collapse: collapse; width: 100%; margin-top: 10px; }
 th, td { border: 1px solid #ccc; padding: 8px; text-align: center; }
 .meal-item { cursor: grab; background: #f9f9f9; margin: 4px 0; padding: 4px; border-radius: 4px; }

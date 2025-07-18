@@ -13,40 +13,42 @@
         <strong>Next Monday:</strong> {{ next_monday }}
     </div>
     <hr>
-    <div id="meals-list">
-        <h2>Meals</h2>
-        <ul>
-            {% for meal in meals %}
-            <li draggable="true" class="meal-item" data-name="{{ meal.name }}">{{ meal.name }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-    <div id="meal-plan">
-        <h2>Weekly Meal Plan</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>Breakfast</th>
-                    <th>Lunch</th>
-                    <th>Dinner</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for day in ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'] %}
-                <tr data-day="{{ day }}">
-                    <td>{{ day }}</td>
-                    {% for meal_type in ['breakfast','lunch','dinner'] %}
-                    <td class="drop-cell" data-meal-type="{{ meal_type }}">
-                        <span class="selected-meal">{{ plan.get(day, {}).get(meal_type, '') }}</span>
-                    </td>
-                    {% endfor %}
-                </tr>
+    <div id="main-flex">
+        <div id="meals-list">
+            <h2>Meals</h2>
+            <ul>
+                {% for meal in meals %}
+                <li draggable="true" class="meal-item" data-name="{{ meal.name }}">{{ meal.name }}</li>
                 {% endfor %}
-            </tbody>
-        </table>
-        <button id="save-plan">Save Plan</button>
-        <button id="clear-plan">Clear Table</button>
+            </ul>
+        </div>
+        <div id="meal-plan">
+            <h2>Weekly Meal Plan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Breakfast</th>
+                        <th>Lunch</th>
+                        <th>Dinner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for day in ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'] %}
+                    <tr data-day="{{ day }}">
+                        <td>{{ day }}</td>
+                        {% for meal_type in ['breakfast','lunch','dinner'] %}
+                        <td class="drop-cell" data-meal-type="{{ meal_type }}">
+                            <span class="selected-meal">{{ plan.get(day, {}).get(meal_type, '') }}</span>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <button id="save-plan">Save Plan</button>
+            <button id="clear-plan">Clear Table</button>
+        </div>
     </div>
     <hr>
     <div id="shopping-list-section">
