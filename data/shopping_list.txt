@@ -1,0 +1,13 @@
+Flour x2
+Eggs x3
+Milk x3
+Sugar x2
+Butter x8
+Cheese x7
+Ham x1
+Spaghetti x1
+Ground Beef x1
+Tomato Sauce x1
+Onion x1
+Garlic x1
+Bread x6

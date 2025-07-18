@@ -57,4 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('export-list').addEventListener('click', function() {
         window.location.href = '/export_list';
     });
+
+    // Clear table logic
+    document.getElementById('clear-plan').addEventListener('click', function() {
+        document.querySelectorAll('.selected-meal').forEach(span => {
+            span.textContent = '';
+        });
+    });
 });
