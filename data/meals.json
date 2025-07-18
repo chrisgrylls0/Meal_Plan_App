@@ -1,22 +1,20 @@
 [
-  {
-    "name": "Pancakes",
-    "ingredients": ["Flour", "Eggs", "Milk", "Sugar", "Butter"]
-  },
-  {
-    "name": "Chicken Salad",
-    "ingredients": ["Chicken Breast", "Lettuce", "Tomato", "Cucumber", "Olive Oil"]
-  },
-  {
-    "name": "Spaghetti Bolognese",
-    "ingredients": ["Spaghetti", "Ground Beef", "Tomato Sauce", "Onion", "Garlic"]
-  },
-  {
-    "name": "Omelette",
-    "ingredients": ["Eggs", "Cheese", "Ham", "Milk"]
-  },
-  {
-    "name": "Grilled Cheese",
-    "ingredients": ["Bread", "Cheese", "Butter"]
-  }
+  {"name": "Creamy Pasta", "ingredients": ["Parmesan", "Creme Fraiche", "Bacon", "Fresh Pasta", "Chestnut Mushrooms", "Broccoli", "Onions", "Garlic"]},
+  {"name": "Fattoush", "ingredients": ["Pita Bread", "Feta", "Lamb mince", "Onions", "Spinach"]},
+  {"name": "Fajitas", "ingredients": ["Cheddar", "Tortillas", "Chicken Breast", "Onions", "Peppers", "Paprika", "Cumin", "Oregano", "Garlic Granules", "Chilli Powder"]},
+  {"name": "Malay Rice", "ingredients": ["Eggs", "Rice", "Honey", "Chicken Breast", "Button Mushrooms", "Onions", "Red Pepper", "Frozen Veg", "Garlic", "Soy Sauce", "Curry Powder", "Chilli Powder"]},
+  {"name": "Salmon + Veg/Chips", "ingredients": ["Salmon", "Tenderstem", "Chips"]},
+  {"name": "Steak + Rice", "ingredients": ["Steak", "Mexican Rice", "Tenderstem"]},
+  {"name": "Side: Roast Veg", "ingredients": ["Peppers", "Onions", "Mushrooms"]},
+  {"name": "Fajita Pasta Bake", "ingredients": ["Onions", "Tomatoes", "Yellow Pepper", "Garlic", "Cheddar", "Smoked Paprika", "Cumin", "Ground Coriander", "Tortelloni", "Soft Cheese", "Tomato Paste", "Chicken Thigh", "Chicken Stock"]},
+  {"name": "Sausages", "ingredients": ["Sausages", "Sweet Potatoes", "Red Onions", "Garlic", "Smoked Paprika"]},
+  {"name": "Halloumi", "ingredients": ["Halloumi x2", "Cumin", "Ground Coriander", "Chickpeas", "Kidney Beans", "Chopped Tomatoes", "Spinach", "Garlic Bread", "Parmesan"]},
+  {"name": "Chicken Pie", "ingredients": ["Butter", "Leek", "Mushrooms", "Chicken breast (big)", "Chicken Stock", "Cornflour", "Double Cream", "Spinach", "Filo Pastry"]},
+  {"name": "Chicken & Chickpea Curry", "ingredients": ["Onions", "Chickpeas", "Korma Curry Pots", "Coconut Milk", "Chicken Stock ", "Chicken thigh (on bone)", "Spinach", "Rice", "Mango Chutney"]},
+  {"name": "Hurry Curry", "ingredients": ["Red Onions", "Garlic", "Chicken Breast", "Red Pepper", "Curry Powder", "Rice", "Spinach", "Lime"]},
+  {"name": "Chicken & Quinoa Stirfry", "ingredients": ["Spring Onions", "Red Pepper", "Courgette", "Chicken Breast", "Smoked Paprika", "Quinoa", "Feta", "Parsley", "Lemon"]},
+  {"name": "Pesto Pasta", "ingredients": ["White Wine Vinegar", "Tomatoes", "Garlic", "Basil", "Farfalle", "Soft Cheese", "Parmesan", "Fine Beans", "Vegetable stock", "Pine nuts"]},
+  {"name": "Bacon Rolls", "ingredients": ["Bacon", "Bread Rolls"]},
+  {"name": "Overnight Oats", "ingredients": ["Milk", "Rolled Oats", "Cocoa Powder", "Greek Yogurt", "Frozen Berries", "Chia Seeds", "Honey", "Protein Powder", "Creatine"]},
+  {"name": "Cereal", "ingredients": ["Milk", "Granola", "Bran Flakes"]}
 ]
