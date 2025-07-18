@@ -4,3 +4,6 @@
 
 # pytest cache
 .cache/
+
+# local files
+meal_plan.json
