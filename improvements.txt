@@ -1,99 +1,13 @@
+Make ot work on touchscreens (iphone and ipad specifically)
 DONE add blank meal to remove
 correct gitignore
 add multiple to a single cell
 ability to remove a single entry in a cell
 DONE ability to manually remove items in the produced shopping list
-
+keep archive/record of meal plan incase of deletion
 DONE add shopping list to clipboard
 
 categorise and order by categories list. 
 If an ingredient is not in the list, put it in the 'Other' category
+make available on world wide web
 
-
-DEPLOY ON DOCKER
-Certainly! Here’s a step-by-step guide to deploy your Flask meal planner app as a Docker container on your Raspberry Pi using VS Code:
-
----
-
-## 1. **Prepare Your Raspberry Pi**
-
-- Make sure your Raspberry Pi is running and connected to your network.
-- Update your Pi:
-  ```
-  sudo apt update && sudo apt upgrade
-  ```
-- Install Docker (if not already installed):
-  ```
-  curl -sSL https://get.docker.com | sh
-  sudo usermod -aG docker $USER
-  ```
-  *Log out and back in to apply group changes.*
-
----
-
-## 2. **Copy Your Project to the Pi**
-
-- You can use VS Code’s Remote SSH extension to connect to your Pi, or use `scp` from your PC:
-  ```
-  scp -r "c:\Users\chris\Documents\Python Scripts\Meal_Plan_App" pi@<raspberry-pi-ip>:~/Meal_Plan_App
-  ```
-  *(Replace `<raspberry-pi-ip>` with your Pi’s IP address.)*
-
----
-
-## 3. **Open the Project in VS Code (on the Pi)**
-
-- Use VS Code’s **Remote SSH** extension to open a remote window on your Pi.
-- Open the `Meal_Plan_App` folder.
-
----
-
-## 4. **Build the Docker Image**
-
-- Open the VS Code terminal (on the Pi).
-- Run:
-  ```
-  cd ~/Meal_Plan_App
-  docker build -t mealplanapp .
-  ```
-
----
-
-## 5. **Run the Docker Container**
-
-- In the same terminal, run:
-  ```
-  docker run -d -p 5000:5000 --name mealplanapp mealplanapp
-  ```
-  - This maps port 5000 on your Pi to the container.
-
----
-
-## 6. **Access the App in Your Browser**
-
-- On any device on your network, open a browser and go to:
-  ```
-  http://<raspberry-pi-ip>:5000
-  ```
-  *(Replace `<raspberry-pi-ip>` with your Pi’s IP address.)*
-
----
-
-## 7. **(Optional) Manage the Container**
-
-- Stop the container:
-  ```
-  docker stop mealplanapp
-  ```
-- Start it again:
-  ```
-  docker start mealplanapp
-  ```
-- View logs:
-  ```
-  docker logs mealplanapp
-  ```
-
----
-
-**Let me know if you need help with any step, or want to automate this further!**
