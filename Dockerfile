@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN pip install flask
+RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
