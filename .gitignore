@@ -6,5 +6,6 @@
 .cache\
 
 # local files
-data\meal_plan.json
-data\CG Meal plan ingredients 20250718.csv
+data/meal_plan.json
+data/CG Meal plan ingredients 20250718.csv
+mealplanapp.tar
