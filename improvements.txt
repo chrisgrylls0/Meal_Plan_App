@@ -1,4 +1,4 @@
-Make ot work on touchscreens (iphone and ipad specifically)
+Make it work on touchscreens (iphone and ipad specifically)
 DONE add blank meal to remove
 correct gitignore
 add multiple to a single cell
@@ -7,7 +7,12 @@ DONE ability to manually remove items in the produced shopping list
 keep archive/record of meal plan incase of deletion
 DONE add shopping list to clipboard
 
-categorise and order by categories list. 
-If an ingredient is not in the list, put it in the 'Other' category
+ingredients list: categorise and order by categories list, then alphabetically within a category
+If an ingredient cannot be found in the categories lookup, put it in the 'Other' category
 make available on world wide web
 
+Some way to note if we are away in a slot
+
+Print button
+
+.txt exports respect the list that is on the screen (i.e. post removal)
