@@ -16,3 +16,8 @@ Some way to note if we are away in a slot
 Print button
 
 .txt exports respect the list that is on the screen (i.e. post removal)
+
+Include tab for essentials
+
+Free text field to add a custom meal/event (temporary, different colour)
+Be able to select the colour from RGB?
